@@ -10,7 +10,6 @@ readme = { workspace = true }
 categories = ["external-ffi-bindings", "database"]
 description = "Native bindings to the libduckdb library, C API; build loadable extensions"
 edition = { workspace = true }
-rust-version = { workspace = true }
 
 [dependencies]
 darling = "0.20.10"

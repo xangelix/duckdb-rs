@@ -18,7 +18,6 @@ categories = ["external-ffi-bindings", "database"]
 description = "Native bindings to the libduckdb library, C API"
 exclude = ["duckdb-sources"]
 edition = { workspace = true }
-rust-version = { workspace = true }
 
 [features]
 default = ["vcpkg", "pkg-config"]

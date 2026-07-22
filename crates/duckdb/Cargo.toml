@@ -11,7 +11,6 @@ license = { workspace = true }
 categories = { workspace = true }
 description = "Ergonomic wrapper for DuckDB"
 edition = { workspace = true }
-rust-version = { workspace = true }
 
 [lib]
 name = "duckdb"
@@ -43,7 +42,11 @@ modern-full = ["chrono", "serde_json", "url", "r2d2", "uuid", "polars", "rust_de
 polars = ["dep:polars", "dep:polars-core"]
 rust_decimal = ["dep:rust_decimal"]
 # Warning: experimental feature
-loadable-extension = ["vtab", "duckdb-loadable-macros", "libduckdb-sys/loadable-extension"]
+loadable-extension = [
+    "vtab",
+    "duckdb-loadable-macros",
+    "libduckdb-sys/loadable-extension",
+]
 
 [dependencies]
 arrow = { workspace = true, features = ["prettyprint", "ffi"] }
@@ -69,7 +72,7 @@ uuid = { workspace = true, optional = true }
 # honors our MSRV. comfy-table 7.2+ requires Rust 1.88 (if-let chains) but doesn't
 # declare rust-version, so cargo's MSRV-aware resolver can't filter it out.
 # Drop this pin when MSRV reaches 1.88.
-comfy-table = "~7.1"
+comfy-table = "7"
 
 [dev-dependencies]
 doc-comment = { workspace = true }
